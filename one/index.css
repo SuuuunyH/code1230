@@ -1,0 +1,77 @@
+body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+    body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+    td,th,caption { font-size:14px; }
+    address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+    a { color:#555; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    img { border:none; }
+    ol,ul,li { list-style:none; }
+    input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+    table { border-collapse:collapse; }
+    html {overflow-y: scroll;}
+
+.images{
+    width: 100vw;
+}
+
+#map{
+
+}
+
+.one{
+    display: flex;
+    justify-content: center;
+    margin: 5vw auto;
+}
+
+.image1{
+    width: 25vw;
+    height: 20vw;
+    margin:auto 2vw;
+}
+
+.text1{
+    font-size: 1.2vw;
+    text-align: left;
+    line-height: 2vw;
+    width: 65vw;
+    margin: 5vw auto;
+}
+
+.two{
+    display: flex;
+    justify-content: center;
+    margin: 5vw auto;
+}
+
+.two_left{
+    width: 30vw;
+    margin: 5vw auto;}
+
+.image2{
+    width: 50vw;
+}
+
+.three{
+    display: flex;
+    justify-content: center;
+    margin: 5vw auto;
+}
+
+.image3{
+    width: 50vw;
+    margin: 5vw auto;
+}
+
+.text2{
+    padding-top: 5vw;
+    width: 30vw;
+    margin: auto;
+}
+
+#map{
+    width: 90vw;
+    height: 20vw;
+    margin: 5vw auto;
+    /*margin-top: 5vw;*/
+}

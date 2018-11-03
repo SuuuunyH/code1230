@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+    <!-- <script type="fill-extrusion" src='./NAMEOFFILE.geojson'></script> -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<img class="images" src="img/traffic.jpg">
+
+		<div id='map'></div>
+	<div class="one">
+		<img class="image1" src="img/1.png">
+		<div class="text1">Sydney's workforce based on gender and age does a good job, but there is still a gap in the eastern suburb area, which seems to me to be because the lack of transportation in this area leads to uneven labor distribution according to gender and age. The place is far from the city centre of Sydney and lacks some convenient means of transportation, such as train stations and bus terminals. And there are 31,488 companies in this area. Although this number is not very large, because of the regional problems, many people in the city center have to pay a lot of money to go to work here, so this place is not the preferred target for everyone's work. This situation has led to an uneven distribution of labor to a certain extent.
+	</div>
+	</div>
+	<div class="two">
+		<div class="two_left">
+					<h1>This is my design, this is a passenger station</h1>
+		<h3>The first floor is a bus terminal with lots of buses for short trips, making the internal suburb area more convenient. For traffic problems in relatively remote areas, I chose to add a subway to the ground. Stand to solve this problem</h3>
+		</div>
+		<img class="image2" src="img/2.png">
+	</div>
+
+	<div class="three">
+		<div class="text2">Design Concept: According to the analysis of male and female labor distribution analysis, we conclude that whether it is labor distribution or social resource allocation, a transition point is needed to integrate and redistribute resources. Therefore, this public transportation hub was designed to achieve the goal of resource integration through bus collection and distribution. In the design, the roof structure of four directions is used to express the divergence of the bus system. Under the roof is a station space formed by a combination of several functions and fast cutting, providing a resting place for passengers and providing bus drivers. A space for rest and entertainment. In the building, a large number of standardized components are used, and then the data processing of the grassshop is used to form the skin of the building, which finally forms a modern public building that meets the needs of the times.
+</div>
+<img class="image3" src="img/3.png">
+	</div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiamstbGluIiwiYSI6ImNqbHFubWp0NDB2OTEza29ldGNxOWx5NzIifQ.m_4BN0Gn4zFIxpdlJgQ7-Q';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
+    center: [0.194105,1.5813002], // starting position [lng, lat]
+    zoom: 9, // starting zoom
+    pitch:45,
+    bearing:-17.6,
+});
+map.on('load', function() {
+
+   map.addLayer({
+       "id": "data",
+       "type": "fill-extrusion",
+       "source": {
+           'type': 'geojson',
+           'data': 'https://jackie-lin.github.io/test/station.geojson'
+       },
+       'layout': {
+           'visibility': 'visible'
+           },
+       'paint': {
+               'fill-extrusion-color' : {
+                   'property': 'colour',
+                   'type': 'identity'
+               },
+               'fill-extrusion-height' : {
+                   'type': 'identity',
+                   'property': 'height'
+               },
+               'fill-extrusion-base' : {
+                   'type': 'identity',
+                   'property': 'base_height'
+               },
+                'fill-extrusion-opacity': 1
+           }
+
+   });
+});
+</script>
+</body>
+</html>
