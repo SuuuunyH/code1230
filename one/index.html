@@ -37,7 +37,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
     center: [1231.24224,-33.839885], // starting position [lng, lat]
     zoom:30, // starting zoom
-    pitch:45,
+    pitch:9,
     bearing:-17.6,
 });
 map.on('load', function() {
@@ -47,7 +47,7 @@ map.on('load', function() {
        "type": "fill-extrusion",
        "source": {
            'type': 'geojson',
-           'data': 'https://jackie-lin.github.io/test/square_one.geojson'
+           'data': 'https://jackie-lin.github.io/test/squares.geojson'
        },
        'layout': {
            'visibility': 'visible'
