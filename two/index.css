@@ -1,0 +1,14 @@
+
+
+.box{
+	width: 60vw;
+	height: 30vw;
+	margin: 5vw auto;
+}
+
+.title{
+	width: 100%;
+	font-size: 3vw;
+	text-align: center;
+	line-height: 4vw;
+}
